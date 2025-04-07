@@ -22,7 +22,7 @@ export default function Home() {
   const onSubmit = async (data) => {
     try {
       setError(null);
-      const res = await axios.post("http://localhost:8000/recomendar", data);
+      const res = await axios.post("https://moto-match-backend.onrender.com/recomendar", data);
       setRecomendacion(res.data);
     } catch (err) {
       console.error("Error al obtener recomendación:", err);
